@@ -1,0 +1,2 @@
+07/09/2019#0 C:\xampp\htdocs\curso-php\aula-12\exceptions\custom.php(18): testar(0)
+#1 {main}<br>

@@ -1,0 +1,19 @@
+<?php
+
+include_once '../conexao.php';
+
+$login = $_REQUEST['login'];
+$senha = $_REQUEST['senha'];
+
+$query = "SELECT * FROM usuario WHERE login = '$login' AND senha = '$senha'";
+
+//var_dump($query);
+
+$statement = $pdo->query($query);
+$usuario = $statement->fetch();
+
+if($usuario){
+    echo "Usuário {$usuario['login']} logado com sucesso!";
+} else {
+    echo "Usuário não encontrado ou senha errada!";
+}
